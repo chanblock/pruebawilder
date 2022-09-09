@@ -1,0 +1,143 @@
+AdrActCnt;Add* active cnt
+AdrBal1in100KCnt;Add* with balance >1in100K cnt
+AdrBal1in100MCnt;Add* with balance > 1in100M cnt
+AdrBal1in10BCnt;Add* with balance > 1in10B cnt
+AdrBal1in10KCnt;Add* with balance > 1in10K cnt
+AdrBal1in10MCnt;Add* with balance > 1in10M cnt
+AdrBal1in1BCnt;Add* with balance > 1in1B cnt
+AdrBal1in1KCnt;Add* with balance > 1in1K cnt
+AdrBal1in1MCnt;Add* with balance > 1in1M cnt
+AdrBalCnt;Add* any balance cnt
+AdrBalNtv0_001Cnt;Add* with balance > 0_001 unt cnt
+AdrBalNtv0_01Cnt;Add* with balance > 0_01 unt cnt
+AdrBalNtv0_1Cnt;Add* with balance > 0_1 unt cnt
+AdrBalNtv100Cnt;Add* with balance > 100 unt cnt
+AdrBalNtv100KCnt;Add* with balance > 100K unt cnt
+AdrBalNtv10Cnt;Add* with balance > 10 unt cnt
+AdrBalNtv10KCnt;Add* with balance > 10K unt cnt
+AdrBalNtv1Cnt;Add* with balance > 1 unt cnt
+AdrBalNtv1KCnt;Add* with balance > 1K unt cnt
+AdrBalNtv1MCnt;Add* with balance > 1M unt cnt
+AdrBalUSD100Cnt;Add* with balance > $100 cnt
+AdrBalUSD100KCnt;Add* with balance > $100K cnt
+AdrBalUSD10Cnt;Add* with balance > $10 cnt
+AdrBalUSD10KCnt;Add* with balance > $10K cnt
+AdrBalUSD10MCnt;Add* with balance > $10M cnt
+AdrBalUSD1Cnt;Add* with balance > $1 cnt
+AdrBalUSD1KCnt;Add* with balance > $1K cnt
+AdrBalUSD1MCnt;Add* with balance > $1M cnt
+AssetEODCompletionTime;Last fully calculated EOD metrics time
+BlkCnt;Block cnt
+BlkSizeMeanByte;Block size mean bytes
+BlkWghtMean;Block weight mean
+BlkWghtTot;Block weight total
+CapAct1yrUSD;Cap* active supply 1yr USD
+CapMVRVCur;Cap* MVRV current supply
+CapMVRVFF;Cap* MVRV free float
+CapMrktCurUSD;Cap* market current supply USD
+CapMrktFFUSD;Cap* market free float USD
+CapRealUSD;Cap* realized USD
+DiffLast;Difficulty last
+DiffMean;Difficulty mean
+FeeByteMeanNtv;Fees byte mean unt
+FeeMeanNtv;Fees transaction mean unt
+FeeMeanUSD;Fees transaction mean USD
+FeeMedNtv;Fees transaction median unt
+FeeMedUSD;Fees transaction median USD
+FeeTotNtv;Fees total unt
+FeeTotUSD;Fees total USD
+FlowInExNtv;Flow in to exchanges unt
+FlowInExUSD;Flow in to exchanges USD
+FlowOutExNtv;Flow out from exchanges unt
+FlowOutExUSD;Flow out from exchanges USD
+FlowTfrFromExCnt;Flow Trf* from exchanges cnt
+HashRate;Hash rate mean
+HashRate30d;Hash rate mean 30d
+IssContNtv;Issuance continuous unt
+IssContPctAnn;Issuance continuous percent annualized
+IssContPctDay;Issuance continuous percent daily
+IssContUSD;Issuance continuous USD
+IssTotNtv;Issuance total unt
+IssTotUSD;Issuance total USD
+NDF;Network distribution factor
+NVTAdj;NVT adjusted
+NVTAdj90;NVT adjusted 90d MA
+NVTAdjFF;NVT adjusted free float
+NVTAdjFF90;NVT adjusted free float 90d MA
+PriceBTC;Price BTC
+PriceUSD;Price USD
+ROI1yr;ROI percent 1yr
+ROI30d;ROI percent 30d
+ReferenceRate;Reference Rate USD
+ReferenceRateETH;#N/A
+ReferenceRateEUR;Reference Rate EUR
+ReferenceRateUSD;Reference Rate USD
+RevAllTimeUSD;Miner revenue all time USD
+RevHashNtv;Revenue per hash unit unt
+RevHashRateNtv;Revenue daily per hash unit per second unt
+RevHashRateUSD;Revenue daily per hash unit per second USD
+RevHashUSD;Revenue per hash unit USD
+RevNtv;Miner revenue unt
+RevUSD;Miner revenue USD
+SER;Supply equality ratio
+SplyAct10yr;Supply active 10yr
+SplyAct180d;Supply active 180d
+SplyAct1d;Supply active 1d
+SplyAct1yr;Supply active 1yr
+SplyAct2yr;Supply active 2yr
+SplyAct30d;Supply active 30d
+SplyAct3yr;Supply active 3yr
+SplyAct4yr;Supply active 4yr
+SplyAct5yr;Supply active 5yr
+SplyAct7d;Supply active 7d
+SplyAct90d;Supply active 90d
+SplyActEver;Supply active ever
+SplyActPct1yr;Supply active percent 1yr
+SplyAdrBal1in100K;Supply in Add* with balance > 1in100K
+SplyAdrBal1in100M;Supply in Add* with balance > 1in100M
+SplyAdrBal1in10B;Supply in Add* with balance > 1in10B
+SplyAdrBal1in10K;Supply in Add* with balance > 1in10K
+SplyAdrBal1in10M;Supply in Add* with balance > 1in10M
+SplyAdrBal1in1B;Supply in Add* with balance > 1in1B
+SplyAdrBal1in1K;Supply in Add* with balance > 1in1K
+SplyAdrBal1in1M;Supply in Add* with balance > 1in1M
+SplyAdrBalNtv0_001;Supply in Add* with balance > 0_001 native unit
+SplyAdrBalNtv0_01;Supply in Add* with balance > 0_01 native unit
+SplyAdrBalNtv0_1;Supply in Add* with balance > 0_1 native unit
+SplyAdrBalNtv1;Supply in Add* with balance > 1 native unit
+SplyAdrBalNtv10;Supply in Add* with balance > 10 unt
+SplyAdrBalNtv100;Supply in Add* with balance > 100 unt
+SplyAdrBalNtv100K;Supply in Add* with balance > 100K unt
+SplyAdrBalNtv10K;Supply in Add* with balance > 10K unt
+SplyAdrBalNtv1K;Supply in Add* with balance > 1K unt
+SplyAdrBalNtv1M;Supply in Add* with balance > 1M unt
+SplyAdrBalUSD1;Supply in Add* with balance > $1
+SplyAdrBalUSD10;Supply in Add* with balance > $10
+SplyAdrBalUSD100;Supply in Add* with balance > $100
+SplyAdrBalUSD100K;Supply in Add* with balance > $100K
+SplyAdrBalUSD10K;Supply in Add* with balance > $10K
+SplyAdrBalUSD10M;Supply in Add* with balance > $10M
+SplyAdrBalUSD1K;Supply in Add* with balance > $1K
+SplyAdrBalUSD1M;Supply in Add* with balance > $1M
+SplyAdrTop100;Supply held by top 100 Add*
+SplyAdrTop10Pct;Supply held by top 10% Add*
+SplyAdrTop1Pct;Supply held by top 1% Add*
+SplyCur;Supply current
+SplyExpFut10yr;Supply future expected next 10yr
+SplyFF;Supply free float
+SplyMiner0HopAllNtv;Supply Miner held by all mining entities unt
+SplyMiner0HopAllUSD;Supply Miner held by all mining entities USD
+SplyMiner1HopAllNtv;Supply Miner held by all Add* unt
+SplyMiner1HopAllUSD;Supply Miner held by all Add* USD
+TxCnt;Transactions cnt
+TxCntSec;Transactions cnt per second
+TxTfrCnt;Transactions Trf* cnt
+TxTfrValAdjNtv;Transactions Trf* value adjusted unt
+TxTfrValAdjUSD;Transactions Trf* value adjusted USD
+TxTfrValMeanNtv;Transactions Trf* value mean unt
+TxTfrValMeanUSD;Transactions Trf* value mean USD
+TxTfrValMedNtv;Transactions Trf* value median unt
+TxTfrValMedUSD;Transactions Trf* value median USD
+VelCur1yr;Velocity current supply 1yr
+VtyDayRet180d;Volatility daily returns 180d
+VtyDayRet30d;Volatility daily returns 30d

@@ -1,0 +1,377 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="bt-1 bb-1 overflow-xh" data-aos="fade-up">
+    <div class="row">
+        <div class="col-12">
+            <div class="box mb-0">
+                <div class="box-body">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                            {
+                            "symbols": [
+                            {
+                                "proName": "BITSTAMP:BTCUSD",
+                                "title": "BTC/USD"
+                            },
+                            {
+                                "proName": "BITSTAMP:ETHUSD",
+                                "title": "ETH/USD"
+                            },
+                            {
+                                "description": "DOGEU/USDT",
+                                "proName": "BINANCE:DOGEUSDT"
+                            },
+                            {
+                                "description": "BTC/EUR",
+                                "proName": "COINBASE:BTCEUR"
+                            },
+                            {
+                                "description": "XRP/USD",
+                                "proName": "BITFINEX:XRPUSD"
+                            },
+                            {
+                                "description": "LINK/USDT",
+                                "proName": "BINANCE:LINKUSDT"
+                            }
+                            ],
+                            "showSymbolLogo": true,
+                            "colorTheme": "light",
+                            "isTransparent": true,
+                            "displayMode": "adaptive",
+                            "locale": "in",
+                            "autosize":true
+                            }
+                            </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-lg-80 py-30 bg-dark3 overflow-xh">
+    <div class="container">
+      
+        <div class="row justify-content-center">
+            <div class="col-12">
+                
+                <div class="text-center" >
+                <h1><a href="/form_register_email"class="box-title text-white mb-20"  >Chanblock  is a powerful tool for blockchain research<br></a></h1>
+                </div>
+            </br>
+            </div>
+            <div class="col-lg-3 col-12">
+                <div class="widget footer_widget clearfix"> 
+                    <form id='form_home_email'method="post">
+                        {% csrf_token %}
+                        {% comment %} <div class="input-group"> {% endcomment %}
+                            {% comment %} <input id="inputemail" name="email" required="required" class="form-control" placeholder="Your Email Address" type="email"> {% endcomment %}
+                            {% comment %} <button type="submit" class="btn btn-primary"> <i class="fa fa-envelope"></i> </button> {% endcomment %}
+                        </div>
+                    </form>
+                   
+                </div>
+            </div>
+            <div class="row mt-50">
+                <div class="col-12 text-center">
+                    {% comment %} <p class="text-white fs-18">
+                        TOTAL BTC HOLD Mt.Gox WALLETS 
+                    </p> {% endcomment %}
+                   
+                    {% comment %} <h1 class="fs-60 text-white fw-600">{{total_BTC|floatformat:"2g"}}</h1> {% endcomment %}
+                    <p class="text-white fs-18 "> Chanblock gives you all the tools to query, extract, and visualize vast amounts of data from the blockchain.<br>
+                         Chanblock is unlocking the power of public blockchain data by making it accessible to everyone. </p>
+                    {% comment %} <h1 class="fs-60 text-white fw-600">0</h1> {% endcomment %}
+
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section> 
+
+<section class="py-50 bg-white" data-aos="fade-up">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-12 text-center">					
+                <h6 class="sub-heading"></h6>
+                <h1 class="mb-15">Services</h1>					
+                <hr class="w-100 bg-primary">
+            </div>
+        </div>
+        <div class="row mt-30">
+            <div class="col-xl-4 col-md-4 col-12">
+                <div class="box no-shadow">
+                    <div class="box-body">
+                        <span class="text-primary fs-50"><i class="fa fa-trophy"></i></span>
+                        <div class="fw-600 fs-18 mb-2 mt-15">Trusted content</div>
+                        <div class="fs-16">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+                        <a href="#" class="d-block mt-30 fs-18 hover-primary">Our reliability <i class="ms-5 fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4 col-12">
+                <div class="box no-shadow">
+                    <div class="box-body">
+                        <span class="text-primary fs-50"><i class="fa fa-user-secret"></i></span>
+                        <div class="fw-600 fs-18 mb-2 mt-15">Industry expertise</div>
+                        <div class="fs-16">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+                        <a href="#" class="d-block mt-30 fs-18 hover-primary">Our team <i class="ms-5 fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4 col-12">
+                <div class="box no-shadow">
+                    <div class="box-body">
+                        <span class="text-primary fs-50"><i class="fa fa-database"></i></span>
+                        <div class="fw-600 fs-18 mb-2 mt-15">Flatrate access</div>
+                        <div class="fs-16">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+                        <a href="#" class="d-block mt-30 fs-18 hover-primary">Our Accounts <i class="ms-5 fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-50 bg-white" data-aos="fade-up">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-12 text-center">					
+                <h6 class="sub-heading"></h6>
+                <h1 class="mb-15">Services</h1>					
+                <hr class="w-100 bg-primary">
+            </div>
+        </div>
+        <div class="row mt-30">
+            <div class="col-xl-4 col-md-4 col-12">
+                <div class="box no-shadow">
+                    <div class="box-body">
+                        <span class="text-primary fs-50"><i class="fa fa-trophy"></i></span>
+                        <div class="fw-600 fs-18 mb-2 mt-15">Trusted content</div>
+                        <div class="fs-16">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+                        <a href="#" class="d-block mt-30 fs-18 hover-primary">Our reliability <i class="ms-5 fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4 col-12">
+                <div class="box no-shadow">
+                    <div class="box-body">
+                        <span class="text-primary fs-50"><i class="fa fa-user-secret"></i></span>
+                        <div class="fw-600 fs-18 mb-2 mt-15">Industry expertise</div>
+                        <div class="fs-16">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+                        <a href="#" class="d-block mt-30 fs-18 hover-primary">Our team <i class="ms-5 fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4 col-12">
+                <div class="box no-shadow">
+                    <div class="box-body">
+                        <span class="text-primary fs-50"><i class="fa fa-database"></i></span>
+                        <div class="fw-600 fs-18 mb-2 mt-15">Flatrate access</div>
+                        <div class="fs-16">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+                        <a href="#" class="d-block mt-30 fs-18 hover-primary">Our Accounts <i class="ms-5 fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ {% comment %} <section class="py-lg-100 py-50 overflow-xh" data-aos="fade-up">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-12 text-start">
+                <h6 class="sub-heading">Market BTC</h6>
+                <h1 class="mb-15">Analyze markets</h1>					
+                <hr class="w-100 bg-primary ms-0">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="home7" role="tabpanel">
+                        <div class="py-15">
+                            <p class="fs-18 mb-20" style="text-align: justify">Investors fear drop in price after refund of 137,890 BTC hacked to Mt. Gox.
+                                You may have noticed that the price of bitcoin has been rising lately. That's good news for anyone who invested in bitcoin at its peak, but now that it's back up, some experts think the price could drop in the coming days.
+                                That's because Mt. Gox is paying for some of their 2014 hacked BTC and is likely to flood the market with it soon. Let's remember what happened in mid-May when the Luna Ward Foundation sold the bit.
+                                </p>								
+                        </div>
+                    </div>                                      
+                </div>
+            </div>
+            <div class="col-lg-5 col-12 d-lg-block d-none card">
+             
+                <img src="{%static 'img/merkatBTC.png'%}"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bt-1 bb-1 overflow-xh" data-aos="fade-up">
+    <div class="col-12">
+        <div class="text-center" >
+        <h1><a>MTGox HOLDING CHART:</a></h1>
+        </div>
+    </br>
+    </div>
+    <div class="row">   
+        <div class="col-12">
+            <div id="plot-content"  class="container">
+                {{div|safe}}          
+                {{script|safe}}
+              </div>
+        </div>
+    </div>
+    <br>
+</section>
+
+<section class="py-lg-80 py-30 overflow-xh" data-aos="fade-up">
+    <div class="container">
+       
+            <div class="col-12">
+                <div class="text-center" >
+                <h1><a>MTGox cold wallet adresses</a></h1>
+            </div>
+            </br>
+        
+            <div class="row"> 
+                <div class="col-12 ">
+                    <div class="box">
+                        
+                            
+                            <table id="mtgox" class="table nowrap" style="width:100%">
+                                    <thead>
+                                    <tr role="row">
+                                        <th class="text-right">Wallet</th>
+                                        <th class="text-right">BTC amount</th>
+                                        <th class="text-right">Status</th>
+                                        <th class="text-right">BTC sold or moved</th>
+                                        <th class="text-right">Last_transaction</th>                                           
+                                        
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for value in list_address_mtgox %}
+                                    
+                                        <tr>
+                                            <td>{{value.MTGCW_Adress}}</td>                        
+                                            <td>${{value.Remaining_BTC_amount|floatformat:"3g"}} &nbsp</td>
+                                            <td>{{value.Status}}</td>                                                                                                                                                 
+                                            <td>{{value.BTC_variation}}</td>                                                      
+                                            <td>{{value.Last_transactionCEST}}</td>
+                                        </tr>
+                                    {% endfor %} 
+
+                                    </tbody>
+                            </table>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+    </div>
+</section> {% endcomment %}
+ 
+<section class="py-50" data-aos="fade-up">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-12 text-center">
+                <h1 class="mb-15">Latest Mt.Gox News </h1>				
+                <hr class="w-100 bg-primary">
+            </div>
+        </div>
+        
+        <div class="row mt-30">
+            <div class="entry-image clearfix">
+                
+                <div class="owl-carousel bottom-dots-center owl-theme" data-nav-dots="true" data-autoplay="true"  data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-xx-items="1">
+                    <div class="item">                                
+                    </div>
+                    <div class="item">                               
+                    </div>
+                    <div class="item">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4 col-12">
+                <div class="blog-post">
+                  
+                    <div class="blog-detail">
+                        <div class="entry-title mb-10">
+                            <a >Will Mt. Gox distributions crash the BTC price further?</a>
+                        </div>
+                        <div class="entry-meta mb-10">
+                            <ul class="list-unstyled">                                
+                                <li><a ><i class="fa fa-calendar-o"></i> 21 Jul 2022</a></li>
+                            </ul>
+                        </div>
+                        <div class="entry-content">
+                            <p style="text-align: justify">Mt. Gox news in July 2022, the Mt. Gox trustee posted an update that the trustee is “preparing to make repayments” in “accordance with the approved rehabilitation plan”. The trustee currently holds approximately 140,000 BTC, BCH and U.S.$500,000.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4 col-12">
+                <div class="blog-post">
+                    
+                    <div class="blog-detail">
+                        <div class="entry-title mb-10">
+                            <a>Victims of Mt. Gox could receive part of their bitcoins as early as August</a>
+                        </div>
+                        <div class="entry-meta mb-10">
+                            <ul class="list-unstyled">
+                                <li><a ><i class="fa fa-calendar-o"></i> 7 Jul 2022</a></li>
+                            </ul>
+                        </div>
+                        <div class="entry-content">
+                            <p style="text-align: justify">Victims of the hack of the now defunct bitcoin (BTC) exchange Mt.Gox, which cost the loss of more than 850 thousand BTC, could receive bitcoin repayment as August, in what could be translated as a threat of sale that could further damage the already turbulent market.</p>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4 col-12">
+                <div class="blog-post">
+            
+                    <div class="blog-detail">
+                        <div class="entry-title mb-10">
+                            <a>What is payout Mt Gox?</a>
+                        </div>
+                        <div class="entry-meta mb-10">
+                            <ul class="list-unstyled">  
+                                <li><a ><i class="fa fa-calendar-o"></i> 12 Aug 2022</a></li>
+                            </ul>
+                        </div>
+                        <div class="entry-content">
+                            <p style="text-align: justify">In 2010, the Mt Gox cryptocurrency exchange was launched, whose headquarters were located in the special region of Shibuya, in the city of Tokyo, Japan. in 2014 the exchange was hacked, Mt Gox has established itself as one of the largest bitcoin exchange platforms in the world. In fact, it managed to handle about 70% of all transactions made in this cryptocurrency.</p>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<link href="http://cdn.pydata.org/bokeh/release/bokeh-2.3.2.min.css" rel="stylesheet" type="text/css">
+<link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-2.3.2.min.css" rel="stylesheet" type="text/css"> 
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.0.min.js"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.0.min.js"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.4.0.min.js"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-gl-2.4.0.min.js"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-2.4.0.min.js"
+        crossorigin="anonymous"></script>
+
+
+	
+{% endblock%}

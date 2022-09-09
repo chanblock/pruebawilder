@@ -1,0 +1,27 @@
+
+.modal1{
+  
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.modal1-container{
+    background: rgb(243, 242, 242);
+    min-width: 1000px;
+    max-width: 90%;
+
+}
+
+.modal-backdrop {
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}

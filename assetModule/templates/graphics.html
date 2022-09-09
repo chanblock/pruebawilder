@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="{%static 'css/chanblock.css'%}">
+
+
+<!-- Latest compiled and minified JavaScript -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+
+
+
+
+<script src="{%static 'js/chanblock.js'%}"></script>
+
+<section class="bt-1 bb-1 overflow-xh" data-aos="fade-up">
+    <div class="row"> 
+             
+        <div class="col-12"> 
+            <div class="bs-example">           
+                <!-- Modal HTML -->
+                <div id="noBackdrop" class="modal fade" data-backdrop="false">
+                    <div class="modal-dialog modal-fullscreen-sm-down">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalToggleLabel"> <strong>Add Graphics</strong></h5>
+                                <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">By metric</a>
+                                        </li>
+                                        <li class="nav-item">
+                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">By crypto</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                            <br><br>
+                                            
+                                            <form id="form_graph" action="addGraphics" method="post">
+                                                {% csrf_token %}
+                                                <div class="form-group"> 
+                                                    <label for="metric">Metrics</label>                  
+                                                    <select class="form-select" data-live-search="true" id="metric" name="metric">
+                                                        {%for metric in variable_coinmetrics%}                                            
+                                                            <option value={{metric.0}} >{{metric.1}}</option>                                              
+                                                        {%endfor%}
+                                                    </select>
+                                                </div>                                            
+                                                <br><br>
+                                                <div class="form-group" > 
+                                                    <label for="assets">Crypto</label>
+                                                    <select class="selectpicker  form-control dropup"  data-dropup-auto="false" multiple  id="assets" name="assets">
+                                                        {%for assets in showcollection %}
+                                                        <option value={{assets}}>{{assets}}</option>
+                                                        {%endfor%}    
+                                                    </select>
+                                                    <br><br><br><br>
+                                                    <br><br>
+                                                    
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Graph  by metric</button>&nbsp&nbsp<button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                            </form>
+
+                                            
+                                        </div>
+                                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                            <br><br>
+                                            <label for="sel1">Crypto</label>
+                                            <form id="form_graph" action="addGraphics" method="post">
+                                                {% csrf_token %}
+                                                <select class="form-select" id="assets" name="assets">
+                                                    {%for assets in showcollection %}
+                                                    <option value={{assets}}>{{assets}}</option>
+                                                    {%endfor%} 
+                                                </select>
+                                                <br><br>
+                                                <label for="metric">Metrics</label>
+                                                <select class="selectpicker form-control dropup" data-dropup-auto="false" multiple id="metric" name="metric">
+                                                    {%for metric in variable_coinmetrics%}
+                                                    <option value={{metric.0}} ><a>{{metric.1|cut:" " }}</a></option>
+                                                    {%endfor%}    
+                                                </select>
+                                                <br><br><br><br>
+                                                <br><br>
+                                                <button type="submit" class="btn btn-primary">Graph by Crypto</button>&nbsp&nbsp<button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                            </form> 
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>     
+            <br>  
+            
+                <div id="plot-content" class="container">   
+                <p align="right"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#noBackdrop"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button> </p>                  
+                <p align="right"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#noBackdrop">Add Graph</button> </p> 
+                    {{div|safe}}
+                    {{script|safe}}
+                </div>
+            
+            <br>      
+        </div>
+        {% comment %}<button type="button" class="btn btn-primary"data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add Graph</button>
+         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="visibility: visible;padding-top: 60px;">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Graphics</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+        
+            <div class="offcanvas-body" >
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">By metric</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">By crypto</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <br><br>
+                        <label for="sel1">Metrics</label>
+                        <form id="form_graph" action="addGraphics" method="post">
+                            {% csrf_token %}
+                            <select class="form-control selectpicker" id="metric" name="metric">
+                                {%for metric in variable_coinmetrics%}
+                                  
+                                
+                                    <option value={{metric.0}} >{{metric.0}}</option>
+                               
+                                {%endfor%}
+                            </select>
+                            <br><br>
+                            <label for="sel1">Crypto</label>
+                            <select class="form-control selectpicker" id="choices-multiple-remove-button" multiple id="assets" name="assets">
+                                {%for assets in showcollection %}
+                                <option value={{assets}}>{{assets}}</option>
+                                {%endfor%}    
+                            </select>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <button type="submit" class="btn btn-primary">Graph  by metric</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <br><br>
+                        <label for="sel1">Crypto</label>
+                        <form id="form_graph" action="addGraphics" method="post">
+                            {% csrf_token %}
+                            <select class="form-control selectpicker" id="assets" name="assets">
+                                {%for assets in showcollection %}
+                                <option value={{assets}}>{{assets}}</option>
+                                {%endfor%} 
+                            </select>
+                            <br><br>
+                            <label for="sel1">Metrics</label>
+                            <select class="form-control selectpicker" id="choices-multiple-remove-button" multiple id="metric" name="metric">
+                                {%for metric in variable_coinmetrics%}
+                                <option value={{metric.0}} >{{metric.0}}</option>
+                                {%endfor%}    
+                            </select>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <button type="submit" class="btn btn-primary">Graph by Crypto</button>
+                        </form>  
+                    </div>
+                </div>
+
+            </div>   
+
+            
+            
+        </div>   {% endcomment %}
+
+
+    </div>
+</section>
+
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.0.min.js"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.0.min.js"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.4.0.min.js"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-gl-2.4.0.min.js"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-2.4.0.min.js"
+        crossorigin="anonymous"></script>
+
+
+
+{%endblock%}

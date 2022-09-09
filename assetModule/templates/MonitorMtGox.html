@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+ 
+ <section class="py-lg-100 py-50 overflow-xh" data-aos="fade-up">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-12 text-start">
+                <h6 class="sub-heading">Market BTC</h6>
+                <h1 class="mb-15">Analyze markets</h1>					
+                <hr class="w-100 bg-primary ms-0">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="home7" role="tabpanel">
+                        <div class="py-15">
+                            <p class="fs-18 mb-20" style="text-align: justify">Investors fear drop in price after refund of 137,890 BTC hacked to Mt. Gox.
+                                You may have noticed that the price of bitcoin has been rising lately. That's good news for anyone who invested in bitcoin at its peak, but now that it's back up, some experts think the price could drop in the coming days.
+                                That's because Mt. Gox is paying for some of their 2014 hacked BTC and is likely to flood the market with it soon. Let's remember what happened in mid-May when the Luna Ward Foundation sold the bit.
+                                </p>								
+                        </div>
+                    </div>                                      
+                </div>
+            </div>
+            <div class="col-lg-5 col-12 d-lg-block d-none card">
+             
+                <img src="{%static 'img/merkatBTC.png'%}"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bt-1 bb-1 overflow-xh" data-aos="fade-up">
+    <div class="col-12">
+        <div class="text-center" >
+        <h1><a>MTGox HOLDING CHART:</a></h1>
+        </div>
+    </br>
+    </div>
+    <div class="row">   
+        <div class="col-12">
+            <div id="plot-content"  class="container">
+                {{div|safe}}          
+                {{script|safe}}
+              </div>
+        </div>
+    </div>
+    <br>
+</section>
+
+<section class="py-lg-80 py-30 overflow-xh" data-aos="fade-up">
+    <div class="container">
+       
+            <div class="col-12">
+                <div class="text-center" >
+                <h1><a>MTGox cold wallet adresses</a></h1>
+            </div>
+            </br>
+        
+            <div class="row"> 
+                <div class="col-12 ">
+                    <div class="box">
+                        
+                            
+                            <table id="mtgox" class="table nowrap" style="width:100%">
+                                    <thead>
+                                    <tr role="row">
+                                        <th class="text-right">Wallet</th>
+                                        <th class="text-right">BTC amount</th>
+                                        <th class="text-right">Status</th>
+                                        <th class="text-right">BTC sold or moved</th>
+                                        <th class="text-right">Last_transaction</th>                                           
+                                        
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for value in list_address_mtgox %}
+                                    
+                                        <tr>
+                                            <td>{{value.MTGCW_Adress}}</td>                        
+                                            <td>${{value.Remaining_BTC_amount|floatformat:"3g"}} &nbsp</td>
+                                            <td>{{value.Status}}</td>                                                                                                                                                 
+                                            <td>{{value.BTC_variation}}</td>                                                      
+                                            <td>{{value.Last_transactionCEST}}</td>
+                                        </tr>
+                                    {% endfor %} 
+
+                                    </tbody>
+                            </table>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+    </div>
+</section>
+
+{% endblock%}
